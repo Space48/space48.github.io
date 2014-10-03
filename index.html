@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meanbee Github</title>
+
+    <link rel="stylesheet" href="assets/css/stylesheet.css" />
+
+    <script src="//use.typekit.net/mfd3nbh.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+    <script data-main="assets/js/main" src="assets/js/require.js"></script>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="meanbee-logo"><h1>Meanbee</h1></a>
+
+        <div class="intro">
+            <div class="intro-group">
+                <div class="intro-title">
+                    <h2>Meanbee <span class="mega-octicon really-more-mega octicon-heart" alt="love"></span> Open Source.</h2>
+                </div>
+                <h2 class="intro-subtitle">Please, help yourselves.</h2>
+            </div>
+        </div>
+    </header>
+
+    <section id="js-projects" class="projects">
+        <div class="loading">
+            Loading..
+        </div>
+    </section>
+
+
+    <script type="x-tmpl-mustache" id="js-template-projects">
+        <ul>
+            {{#projects}}
+            <li>
+                <h2><a href="{{ url }}">{{ name }}</a></h2>
+                <span class="badge badge-stars"><span class="octicon octicon-star"></span> {{ stargazers_count }}</span>
+                <span class="badge badge-watchers"><span class="octicon octicon-eye"></span> {{ watchers_count }}</span>
+                <span class="badge badge-forks"><span class="octicon octicon-repo-forked"></span> {{ forks }}</span>
+                <p>
+                    {{ description }}
+                </p>
+            </li>
+            {{/projects}}
+        </ul>
+    </script>
+</body>
+</html>

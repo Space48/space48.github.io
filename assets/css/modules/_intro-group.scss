@@ -1,0 +1,32 @@
+.intro-group {
+    @include outer-container();
+    @include rem(padding, 40px 20px);
+    text-align: center;
+
+    .intro-title {
+        font-weight: 300;
+        @include rem(font-size, 48px);
+        margin: 0 0 1rem;
+        line-height: 1.17;
+
+        h1 {
+            color: $yellow;
+            display: inline;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+
+    .intro-subtitle {
+        @include rem(font-size, 24px);
+        margin: 0;
+    }
+
+    @include modular-bp(em(920)) {
+        .intro-subtitle {
+            @include rem(font-size, 30px);
+        }
+
+        @include rem(padding, 70px 20px);
+    }
+}

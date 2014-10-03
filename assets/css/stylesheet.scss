@@ -1,0 +1,58 @@
+$lt-ie9: false !default;
+
+@import "config";
+
+@import "mixins/bourbon/bourbon";
+@import "mixins/neat/neat";
+@import "mixins/lib/omega-reset";
+@import "mixins/lib/font-size-rem";
+@import "mixins/lib/modular-bp";
+
+@import "modules/reset";
+@import "modules/octicons";
+@import "modules/logo";
+@import "modules/intro-group";
+@import "modules/projects";
+
+body {
+    color: #333;
+    font: 400 100%/1.75 "iskra", Arial;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: #ffa800;
+    border-bottom: 1px solid rgba(255,168,0,0.1);
+    -webkit-transition: border-bottom-color ease .3s;
+    -moz-transition: border-bottom-color ease .3s;
+    transition: border-bottom-color ease .3s;
+    text-decoration: none;
+}
+
+header {
+    margin-top: 50px;
+}
+
+
+
+.octicon-heart {
+    color: red;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+}
+
+.intro {
+    background: rgba(240,234,228,0.4);
+    border-top: 1px solid #f3efe9;
+    border-bottom: 1px solid #f3efe9;
+
+    margin-top: -10px;
+}
+
+.badge {
+    padding: 5px;
+    display: inline-block;
+}

@@ -1,0 +1,24 @@
+.projects {
+	li {
+		list-style: none;
+		margin: 0;
+
+		float: left;
+		width: 25%;
+
+		box-sizing: border-box;
+		padding: 10px;
+
+		&:nth-child(4n + 1) {
+			clear: both;
+		}
+	}
+
+	h2 {
+		font-weight: bold;
+
+		a {
+			text-decoration: none;
+		}
+	}
+}

@@ -821,9 +821,9 @@ table {
   border: 3px solid white;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
   display: block;
-  height: 81px;
+  height: 92px;
   margin: 0 auto;
-  width: 81px;
+  width: 92px;
   z-index: 1; }
   .meanbee-logo:before {
     background-color: #f6f3ea;
@@ -834,18 +834,18 @@ table {
     box-shadow: inset 0 0 1px 2px rgba(0, 0, 0, 0.08);
     content: "";
     display: block;
-    height: 75px;
-    width: 75px; }
+    height: 86px;
+    width: 86px; }
   .meanbee-logo:after {
     background: transparent url(../images/troy.png) no-repeat center;
     background-size: 90%;
     content: "";
     display: block;
-    height: 121.5px;
+    height: 138px;
     position: relative;
-    top: -116px;
-    left: -61px;
-    width: 170px;
+    top: -132px;
+    left: -69px;
+    width: 193px;
     z-index: 2; }
 @media only screen and (min-width: 43.75em) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 43.75em) and (min--moz-device-pixel-ratio: 1.5), only screen and (min-width: 43.75em) and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-width: 43.75em) and (min-resolution: 144dpi), only screen and (min-width: 43.75em) and (min-resolution: 1.5dppx) {
   .meanbee-logo:after {
@@ -929,7 +929,7 @@ header {
   background: rgba(240, 234, 228, 0.4);
   border-top: 1px solid #f3efe9;
   border-bottom: 1px solid #f3efe9;
-  margin-top: -10px; }
+  margin-top: -20px; }
 
 .badge {
   padding: 5px;

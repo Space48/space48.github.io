@@ -1,5 +1,5 @@
-$media: screen;
 $feature: min-width;
+$media: screen;
 
 @mixin modular-bp($breakpoint) {
     @media only #{$media} and ($feature: $breakpoint) { @content; }

@@ -1,4 +1,12 @@
-require(["lib/domReady", "lib/mustache", "lib/promise", "lib/json3", "lib/store"], function(domReady, mustache, promise, json, store) {
+require.config({
+  shim: {
+    "lib/underscore": {
+      exports: '_'
+    }
+  }
+});
+
+require(["lib/domReady", "lib/mustache", "lib/promise", "lib/json3", "lib/store", "lib/underscore"], function(domReady, mustache, promise, json, store, _) {
 	'use strict';
 
 	var Helpers = {
@@ -70,6 +78,12 @@ require(["lib/domReady", "lib/mustache", "lib/promise", "lib/json3", "lib/store"
 
 				return b_interactions - a_interactions;
 			});
+		},
+
+		removeForks: function (repos) {
+			return _.reject(repos, function (item) {
+				return item.fork;
+			});
 		}
 	};
 
@@ -86,7 +100,9 @@ require(["lib/domReady", "lib/mustache", "lib/promise", "lib/json3", "lib/store"
 		promise.get('https://api.github.com/orgs/meanbee/repos').then(function (error, text, xhr) {
 			if (!error) {
 				var api_response = JSON.parse(text);
-				var content = Util.sortByActivity(api_response);
+				var content = Util.sortByActivity(
+					Util.removeForks(api_response)
+				);
 
 				template.renderTemplate('js-template-projects', { 'projects': content });
 

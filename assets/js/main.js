@@ -62,6 +62,17 @@ require(["lib/domReady", "lib/mustache", "lib/promise", "lib/json3", "lib/store"
 		}
 	}
 
+	var Util = {
+		sortByActivity: function (repos) {
+			return repos.sort(function (a, b) {
+				var a_interactions = (a.stargazers_count + a.watchers_count + a.forks);
+				var b_interactions = (b.stargazers_count + b.watchers_count + b.forks);
+
+				return b_interactions - a_interactions;
+			});
+		}
+	};
+
 	var cache_keys = {
 		REPOS: 'repos'
 	};
@@ -74,7 +85,8 @@ require(["lib/domReady", "lib/mustache", "lib/promise", "lib/json3", "lib/store"
 	if (cache_value == undefined) {
 		promise.get('https://api.github.com/orgs/meanbee/repos').then(function (error, text, xhr) {
 			if (!error) {
-				var content = JSON.parse(text);
+				var api_response = JSON.parse(text);
+				var content = Util.sortByActivity(api_response);
 
 				template.renderTemplate('js-template-projects', { 'projects': content });
 

@@ -97,7 +97,7 @@ require(["lib/domReady", "lib/mustache", "lib/promise", "lib/json3", "lib/store"
 	var template = new Template('js-projects');
 
 	if (cache_value == undefined) {
-		promise.get('https://api.github.com/orgs/meanbee/repos').then(function (error, text, xhr) {
+		promise.get('https://api.github.com/orgs/meanbee/repos?per_page=100').then(function (error, text, xhr) {
 			if (!error) {
 				var api_response = JSON.parse(text);
 				var content = Util.sortByActivity(

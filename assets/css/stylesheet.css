@@ -860,34 +860,21 @@ table {
   width: 80%;
   margin: auto;
   margin-top: 40px; }
-  .projects li {
-    list-style: none;
-    margin: 0;
-    box-sizing: border-box;
-    padding: 10px;
-    float: left;
-    width: 100%; }
+  .projects ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px; }
     @media only screen and (min-width: 43.75em) {
-      .projects li {
-        width: 50%; }
-        .projects li:nth-child(2n+1) {
-          clear: both; } }
+      .projects ul {
+        grid-template-columns: repeat(2, 1fr); } }
     @media only screen and (min-width: 62.5em) {
-      .projects li {
-        width: 33.3333333333%; }
-        .projects li:nth-child(2n+1) {
-          clear: none; }
-        .projects li:nth-child(3n+1) {
-          clear: both !important; } }
+      .projects ul {
+        grid-template-columns: repeat(3, 1fr); } }
     @media only screen and (min-width: 75em) {
-      .projects li {
-        width: 25%; }
-        .projects li:nth-child(2n+1) {
-          clear: none; }
-        .projects li:nth-child(3n+1) {
-          clear: none !important; }
-        .projects li:nth-child(4n+1) {
-          clear: both !important; } }
+      .projects ul {
+        grid-template-columns: repeat(4, 1fr); } }
+  .projects li {
+    list-style: none; }
   .projects h2 {
     font-weight: bold; }
     .projects h2 a {

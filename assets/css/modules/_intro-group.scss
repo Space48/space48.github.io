@@ -8,9 +8,9 @@
         @include rem(font-size, 48px);
         margin: 0 0 1rem;
         line-height: 1.17;
+        color: white;
 
         h1 {
-            color: $yellow;
             display: inline;
             font-weight: 400;
             margin: 0;
